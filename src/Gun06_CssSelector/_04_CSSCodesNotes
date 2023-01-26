@@ -1,0 +1,31 @@
+
+/****    OLMAYAN    ****/
+input:not(.reqired)  ->  input lardan class ı required OLMAYANLAR.
+input:not([type=email]) ->  input lardan type ı email OLMAYANLAR.
+
+
+/****    CHILD    ****/
+#profile > p  -> id si profile olanın tag i p olan çocuğu
+
+#profile > *:nth-child(5) -> id si profile olanın 5. çocuğu. // istersen * yerine tag yazabilirsin.
+
+#profile>p:nth-last-child(1) -> çocukları tersten saymaya başlar
+
+#profile>p:nth-of-type(2) -> id si profile olanın  2. p tag li çocuğu. sayarken tag i sayıyor. yani bu kodda üstte bir p daha var.
+
+
+/****    SIBLING    ****/
+
+h1 ~ img -> öncesinde h1 tag li elamanı bulur. Kardeşlerinin tamamında arar.
+h1 + img -> bitişik olan kardeş
+
+
+/****    NOT    ****/
+
+[id='questionDiv']>div:not([class='destinationBox'])  ->  çocuklardan class ı destinationBox olmayanlar. veya [id='questionDiv']>div:not(.destinationBox)
+
+
+
+
+
+

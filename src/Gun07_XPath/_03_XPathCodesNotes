@@ -1,0 +1,76 @@
+
+    driver.get("http://demoqa.com/text-box");
+
+
+        //body//input -> body altındaki ilk inputa gider çocuk torun fark etmez
+
+        //text() yerine . koyabiliriz
+
+/****    ROW NUMBER    ****/
+
+(//span[text()='Setup'])[1]  -> bu locator a sahip birincisi.
+
+
+/****    CONTAINS    ****/
+
+//*[contains(@type,'sub')]   type inde sub kelimesi geçen
+
+/****    STARTS-WITH    ****/
+
+//span[starts-with(text(),'Web Tab')]  -> text i ... ile başlayan. //span[starts-with(.,'Web Tab')] şeklinde de yazılabiilir.
+
+/****    ENDS-WITH    ****/
+
+//div[ends-with(@class,'dion')]  -> The ends-with function is part of xpath 2.0 but browsers generally only support 1.0
+                                    Bu sebeple tercih edilmez. Bu durumda CSS kullanmak daha mantıklı. div[class$='dion']
+
+/****    CHILD    ****/
+
+//div[@class='container playgound-body']/child::div[2]  -> 2. div çocuk
+
+(//span[text()='Setup'])[1]  -> eğer locater ı detaylı verip
+
+/****    PARENT    ****/
+
+//div[@class='main-header']/parent::div/parent::div -> babası ve devamında büyük babası
+
+/****    ANCESTOR    ****/
+
+//textarea[@id='currentAddress']/ancestor::form  -> bulunduğun satırdan yukarıya HTML e kadar istediğin tag i işaretleyebilirsin
+
+/****    DESCENDANT    ****/
+
+//div[@class='accordion']/descendant::*  -> bütün altsoy sayısını verir
+
+//div[@class='accordion']/descendant::span -> bütün alt soy lar arasında arar.Ancestor tersi.
+
+/****    FOLLOWING    ****/
+
+//div[@class='accordion']/following::*   -> Altındaki kendi soyu haricindeki tüm element sayısını verir
+
+//div[@class='accordion']/following::div  -> kendi soyu olmayan aşağıdaki elementlerden div olan. Bu kendisinden daha dışarıda bir element olabilir.
+
+/****    FOLLOWING-SIBLING    ****/
+
+//div[@id='app']/following-sibling::script  -> kendisinden sonraki kardeşlerinden
+
+/****    PRECEDING-SIBLING    ****/
+
+//div[@id='app']/preceding-sibling::script  -> kendisinden önceki kardeşlerinden
+
+/****    OR & AND    ****/
+
+//textarea[@placeholder='Current Address' and @rows='5']
+
+//textarea[@placeholder='Current Address' or @rows='5']
+
+
+
+
+
+
+
+
+        https://www.zillow.com/homedetails/13627-Greenridge-Dr-Sugar-Land-TX-77498/27560329_zpid/
+
+        https://www.zillow.com/homedetails/12500-Sandpiper-Dr-APT-184-Houston-TX-77035/28424790_zpid/

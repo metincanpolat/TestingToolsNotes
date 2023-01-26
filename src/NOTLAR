@@ -1,0 +1,4 @@
+
+CSS Selector ve XPath arasında 2 milisaniye hız farkı var css daha hızlı.
+
+JS click ön tarafta bir engelleme olsa dahi arka tarafta click yaptığı için click sorunu olmaz.
